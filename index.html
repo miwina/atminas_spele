@@ -41,19 +41,72 @@
         </div><!--beidzas header-->
 
         <div class="content">
-            <p>Noteikumu teksts</p>
+            <h3 class="virsraksts">Noteikumu teksts</h3>
+
+            Vārds:<input id="vards"/>
+            <br />
+            Vecums: <input id="vecums"/>
+            <br />
+            Reģions:
+            <select id="regions">
+                <option value="Vidzeme">Vidzeme</option>
+                <option value="Latgale">Latgale</option>
+                <option value="Kurzeme">Kurzeme</option>
+
+            </select>
+            <br />
+            <button onclick="saktSpeli()">Sākt</button>
+
 
         </div>
 
     </div><!--beidzas wrapper-->
 
 <script>
+
+    function saktSpeli()
+    {
+        let vards = document.querySelector('#vards').value 
+        let vecums = document.querySelector('#vecums').value 
+        let regions = document.querySelector('#regions').value 
+        console.log(vards)
+
+        if (vards == '')
+        {
+            alert ('Ievadi vārdu!')
+        }
+    } // beidzas saktSpeli()
+
+
+    /*
     let vards
     const valsts = "Latvija"
     vards = "Laura"
     let vards2=`Pēteris ir
     labais!!`
     let klase =['Jānis', 'Laura', 'Jana']
+    klase[3]='Uģis'
+
+
+    let skolens = {
+        vards: 'Jānis',
+        vecums: 16,
+        'patīk datori':'jā'
+    } 
+     skolens ['vards']
+    let json = [
+        {
+            vards:'Jānis',
+            vecums: 16
+        },
+        {
+            vards:'Jana',
+            vecums: 17
+        }
+    ]
+    console.log('beigas ir')
+    document.querySelector('.virsraksts').innerHTML = 'Vārds: '+vards
+    */
 </script>
 </body>
 </html>
